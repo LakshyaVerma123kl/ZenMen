@@ -3,7 +3,6 @@ import SupportSection from "./SupportSection";
 import Testimonial from "./Testimonial";
 import Signin from "./Signin";
 import Issues from "./Issues";
-import Doctor from "./Doctor";
 
 const heroImage = "https://via.placeholder.com/1500x600?text=Hero+Image";
 const featureImage1 = "https://via.placeholder.com/400x300?text=Feature+1";
