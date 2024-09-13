@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import image from "./assets/logo.png";
 
 function Header() {
@@ -11,40 +11,56 @@ function Header() {
   };
 
   return (
-    <header className="relative flex flex-col sm:flex-row items-center bg-gray-100 shadow-lg w-full px-6 py-3">
-      <Link
+    <header className="relative flex flex-col font-semibold sm:flex-row items-center bg-gray-100 shadow-lg w-full px-6 py-3">
+      <NavLink
         to="/"
-        className="text-lg font-semibold text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+        className="text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
       >
         <img src={image} alt="logo" className="h-10 mb-4 sm:mb-0" />
-      </Link>
+      </NavLink>
       <nav className="flex flex-1 flex-col sm:flex-row items-center justify-center">
         {/* Desktop Menu */}
         <div className="hidden sm:flex space-x-8">
-          <Link
+          <NavLink
             to="/"
-            className="text-lg font-semibold text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-blue-500" : "text-gray-800"
+              } hover:text-blue-500 transition duration-300 ease-in-out`
+            }
           >
             Home
-          </Link>
-          <Link
-            to="/doctor"
-            className="text-lg font-semibold text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+          </NavLink>
+          <NavLink
+            to="/xyz"
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-blue-500" : "text-gray-800"
+              } hover:text-blue-500 transition duration-300 ease-in-out`
+            }
           >
             Mental Wellness
-          </Link>
-          <Link
-            to="#"
-            className="text-lg font-semibold text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+          </NavLink>
+          <NavLink
+            to="/xyz"
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-blue-500" : "text-gray-800"
+              } hover:text-blue-500 transition duration-300 ease-in-out`
+            }
           >
             Resources
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/doctor"
-            className="text-lg font-semibold text-gray-800 hover:text-blue-500 transition duration-300 ease-in-out"
+            className={({ isActive }) =>
+              `${
+                isActive ? "text-blue-500" : "text-gray-800"
+              } hover:text-blue-500 transition duration-300 ease-in-out`
+            }
           >
             Locate Clinics
-          </Link>
+          </NavLink>
         </div>
 
         {/* Mobile Menu Button */}
@@ -97,9 +113,9 @@ function Header() {
       <div className="absolute right-6 top-1/2 transform -translate-y-1/2">
         <Link
           to="/login"
-          className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out"
+          className="bg-blue-400 text-white font-semibold py-2.5 px-6 rounded-xl shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out"
         >
-          Login / Sign Up
+          Login
         </Link>
       </div>
     </header>
