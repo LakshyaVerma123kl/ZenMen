@@ -3,11 +3,14 @@ import SupportSection from "./SupportSection";
 import Testimonial from "./Testimonial";
 import Signin from "./Signin";
 import Issues from "./Issues";
+import heroImage from "./assets/Hero.jpg";
 
-const heroImage = "https://via.placeholder.com/1500x600?text=Hero+Image";
-const featureImage1 = "https://via.placeholder.com/400x300?text=Feature+1";
-const featureImage2 = "https://via.placeholder.com/400x300?text=Feature+2";
-const featureImage3 = "https://via.placeholder.com/400x300?text=Feature+3";
+const Wellness =
+  "https://img.freepik.com/premium-vector/man-enjoys-soothing-sensation-massage-enhanced-by-use-lavender-rose-essential_216520-154494.jpg?w=740";
+const featureImage2 =
+  "https://img.freepik.com/free-vector/professional-consulting-service-research-recommendation-idea-strategy-management-troubleshooting-help-clients-with-business-problems-isolated-flat-vector-illustration_613284-1560.jpg?t=st=1726127213~exp=1726130813~hmac=e94df1f8ce1618d1817b84edc9758bf391d07d18ea2190e1a9ee420d1c0b51bb&w=740";
+const featureImage3 =
+  "https://img.freepik.com/free-photo/cropped-friends-holding-wrists-each-othe-chain-support-collaborate_1098-18569.jpg?t=st=1726127170~exp=1726130770~hmac=5487ccb9447275d0ef6f9e773b4b4e24a701a70fb92b6e1b4ef1809c6361354b&w=740";
 
 function MainPage() {
   return (
@@ -45,7 +48,7 @@ function MainPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
             <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
               <img
-                src={featureImage1}
+                src={Wellness}
                 alt="Feature 1"
                 className="w-full h-40 sm:h-48 object-cover mb-4 sm:mb-6 rounded-t-lg"
               />
@@ -92,7 +95,6 @@ function MainPage() {
       {/* Other sections */}
       <SupportSection />
       <Issues />
-
       <Testimonial />
       <Signin />
     </div>
